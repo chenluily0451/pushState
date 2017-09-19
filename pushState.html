@@ -188,22 +188,20 @@
 
 			function checkUrl(){
 				var locationHref = window.location.href
+                $('.container div').hide()
 				if(locationHref.indexOf('menu1') > -1 ) {
-					$('.container div').hide()
+					
                     $('#ct1').show()
 				}
                 if(locationHref.indexOf('menu2') > -1 ) {
-                    $('.container div').hide()
                     $('#ct2').show()
                 }
                 if(locationHref.indexOf('menu3') > -1 ) {
-                    $('.container div').hide()
                     $('#ct3').show()
                 }
 			}
 			if(window.history.pushState) {
                 window.addEventListener('popstate',function(){
-                    console.log('back')
                     checkUrl()
                 })
 			}
